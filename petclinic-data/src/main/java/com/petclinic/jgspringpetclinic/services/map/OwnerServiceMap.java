@@ -1,11 +1,13 @@
 package com.petclinic.jgspringpetclinic.services.map;
 
 import com.petclinic.jgspringpetclinic.model.Owner;
-import com.petclinic.jgspringpetclinic.services.BaseService;
+import com.petclinic.jgspringpetclinic.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-public class OwnerServiceMap extends AbstractBaseMap<Owner, Long> implements BaseService<Owner, Long> {
+@Service
+public class OwnerServiceMap extends AbstractBaseMap<Owner, Long> implements OwnerService {
     @Override
     public Set<Owner> findAll() {
         return super.findAll();
@@ -24,5 +26,10 @@ public class OwnerServiceMap extends AbstractBaseMap<Owner, Long> implements Bas
     @Override
     public void delete(Long id) {
         super.delete(id);
+    }
+
+    @Override
+    public Owner fingByLastname(String lastname) {
+        return null;
     }
 }

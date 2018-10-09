@@ -1,11 +1,13 @@
 package com.petclinic.jgspringpetclinic.services.map;
 
 import com.petclinic.jgspringpetclinic.model.Vet;
-import com.petclinic.jgspringpetclinic.services.BaseService;
+import com.petclinic.jgspringpetclinic.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractBaseMap<Vet, Long> implements BaseService<Vet, Long> {
+@Service
+public class VetServiceMap extends AbstractBaseMap<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
         return super.findAll();
